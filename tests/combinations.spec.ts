@@ -34,22 +34,41 @@ test.describe('Pruebas Combinatorias y Elementos Dinámicos', () => {
     await takeScreenshot(page, 'combination_success');
   });
 
-  test('CP04: DatePicker con fecha futura válida', async ({ page }) => {
-    const form = new PracticeFormPage(page);
-    await form.goto();
-    await form.removeAds();
+test('CP04: DatePicker con fecha futura válida', async ({ page }) => {
+  const form = new PracticeFormPage(page);
+  await form.goto();
+  await form.removeAds();
 
-    await form.fillFirstName('Alice');
-    await form.fillLastName('Johnson');
-    await form.fillEmail('alice.johnson@example.com');
-    await form.selectGender('Other');
-    await form.fillMobile('9876543210');
-    await form.setDateOfBirth('14 Jan 2026');
+  // Llenar todos los campos
+  await form.fillFirstName('Alice');
+  await form.fillLastName('Johnson');
+  await form.fillEmail('alice.johnson@example.com');
+  await form.selectGender('Other');
+  await form.fillMobile('9876543210');
+  await form.setDateOfBirth('14 Jan 2026');
 
-    await form.submit();
-    expect(await form.isSubmissionModalVisible()).toBeTruthy();
-    await takeScreenshot(page, 'future_date_success');
-  });
+  // Añadir Subject
+  await form.addSubject('Computer Science');
+
+  // Seleccionar Hobbies
+  await form.selectHobby('Sports');
+  await form.selectHobby('Reading');
+
+  // Subir imagen 
+  const imagePath = path.resolve(process.cwd(), 'test_image.jpg');
+  await form.uploadPicture(imagePath);
+
+  // Llenar Current Address
+  await form.fillCurrentAddress('123 Main St');
+
+  // Seleccionar Estado y Ciudad
+  await form.selectState('NCR');
+  await form.selectCity('Delhi');
+
+  await form.submit();
+  expect(await form.isSubmissionModalVisible()).toBeTruthy();
+  await takeScreenshot(page, 'future_date_success');
+});
 
   test('CP05: Subir imagen + nombre vacío → debe fallar', async ({ page }) => {
     const form = new PracticeFormPage(page);
