@@ -1,0 +1,161 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link [ref=e4] [cursor=pointer]:
+      - /url: https://demoqa.com
+      - img [ref=e5]
+  - generic [ref=e8]:
+    - generic [ref=e11]:
+      - generic [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]:
+          - img [ref=e17]
+          - text: Elements
+        - img [ref=e22]
+      - generic [ref=e26]:
+        - generic [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]:
+            - img [ref=e31]
+            - text: Forms
+          - img [ref=e37]
+        - list [ref=e42]:
+          - listitem [ref=e43] [cursor=pointer]:
+            - img [ref=e44]
+            - generic [ref=e46]: Practice Form
+      - generic [ref=e49] [cursor=pointer]:
+        - generic [ref=e50]:
+          - img [ref=e52]
+          - text: Alerts, Frame & Windows
+        - img [ref=e57]
+      - generic [ref=e63] [cursor=pointer]:
+        - generic [ref=e64]:
+          - img [ref=e66]
+          - text: Widgets
+        - img [ref=e71]
+      - generic [ref=e77] [cursor=pointer]:
+        - generic [ref=e78]:
+          - img [ref=e80]
+          - text: Interactions
+        - img [ref=e85]
+      - generic [ref=e91] [cursor=pointer]:
+        - generic [ref=e92]:
+          - img [ref=e94]
+          - text: Book Store Application
+        - img [ref=e99]
+    - generic [ref=e103]:
+      - generic [ref=e104]:
+        - heading "Practice Form" [level=1] [ref=e105]
+        - heading "Student Registration Form" [level=5] [ref=e106]
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - generic [ref=e110]: Name
+            - textbox "First Name" [ref=e112]
+            - textbox "Last Name" [ref=e115]: Test
+          - generic [ref=e116]:
+            - generic [ref=e118]: Email
+            - textbox "name@example.com" [ref=e120]: test@example.com
+          - generic [ref=e121]:
+            - generic [ref=e122]: Gender
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - radio "Male" [checked] [ref=e125]
+                - generic [ref=e126]: Male
+              - generic [ref=e127]:
+                - radio "Female" [ref=e128]
+                - generic [ref=e129]: Female
+              - generic [ref=e130]:
+                - radio "Other" [ref=e131]
+                - generic [ref=e132]: Other
+          - generic [ref=e133]:
+            - generic [ref=e135]: Mobile(10 Digits)
+            - textbox "Mobile Number" [ref=e137]: "1234567890"
+          - generic [ref=e138]:
+            - generic [ref=e140]: Date of Birth
+            - textbox [ref=e144]: 14 Jan 2026
+          - generic [ref=e145]:
+            - generic [ref=e147]: Subjects
+            - textbox [ref=e154]
+          - generic [ref=e157]:
+            - generic [ref=e159]: Hobbies
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - checkbox "Sports" [ref=e162]
+                - generic [ref=e163]: Sports
+              - generic [ref=e164]:
+                - checkbox "Reading" [ref=e165]
+                - generic [ref=e166]: Reading
+              - generic [ref=e167]:
+                - checkbox "Music" [ref=e168]
+                - generic [ref=e169]: Music
+          - generic [ref=e170]:
+            - generic [ref=e172]: Picture
+            - generic [ref=e174]:
+              - generic [ref=e175]: Select picture
+              - button "Select picture" [ref=e176]
+          - generic [ref=e177]:
+            - generic [ref=e179]: Current Address
+            - textbox "Current Address" [ref=e181]
+          - generic [ref=e182]:
+            - generic [ref=e184]: State and City
+            - generic [ref=e187]:
+              - generic [ref=e188]:
+                - generic [ref=e189]: Select State
+                - textbox [ref=e192]
+              - img [ref=e196]
+            - generic [ref=e198]:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Select City
+                    - generic:
+                      - generic:
+                        - textbox [disabled]
+                  - generic:
+                    - generic:
+                      - img
+          - button "Submit" [active] [ref=e201] [cursor=pointer]
+      - iframe [ref=e205]:
+        - generic [ref=f12e8] [cursor=pointer]:
+          - link [ref=f12e10]:
+            - /url: https://clck.mgid.com/ghits/24638725/i/58092122/0/pp/1/10?h=AO6AgPj_1f7AgcjxFY8vqnbZ55PuaceyEck4n3lEgIi9RUY9WpTxlGNfresrLqaE_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29N6nrxSGsEPIiJ6vy_ZiO-4&rid=2efe6ab0-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yINLSG4UbKMGxZxPQBEUpqbqUd95bTSEBwmXOMB8XK7TBQztbPKSnJkAMXGzH6fOVQ**&muid=q0eq652EFHBi
+          - generic [ref=f12e13]:
+            - link "Colgazeta" [ref=f12e15]:
+              - /url: https://clck.mgid.com/ghits/24638725/i/58092122/0/pp/1/10?h=AO6AgPj_1f7AgcjxFY8vqnbZ55PuaceyEck4n3lEgIi9RUY9WpTxlGNfresrLqaE_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29N6nrxSGsEPIiJ6vy_ZiO-4&rid=2efe6ab0-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yINLSG4UbKMGxZxPQBEUpqbqUd95bTSEBwmXOMB8XK7TBQztbPKSnJkAMXGzH6fOVQ**&muid=q0eq652EFHBi
+            - 'link "Pon un rollo bajo el inodoro por la noche: el resultado impacta" [ref=f12e17]':
+              - /url: https://clck.mgid.com/ghits/24638725/i/58092122/0/pp/1/10?h=AO6AgPj_1f7AgcjxFY8vqnbZ55PuaceyEck4n3lEgIi9RUY9WpTxlGNfresrLqaE_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29N6nrxSGsEPIiJ6vy_ZiO-4&rid=2efe6ab0-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yINLSG4UbKMGxZxPQBEUpqbqUd95bTSEBwmXOMB8XK7TBQztbPKSnJkAMXGzH6fOVQ**&muid=q0eq652EFHBi
+            - link "Más información→" [ref=f12e19]:
+              - /url: https://clck.mgid.com/ghits/24638725/i/58092122/0/pp/1/10?h=AO6AgPj_1f7AgcjxFY8vqnbZ55PuaceyEck4n3lEgIi9RUY9WpTxlGNfresrLqaE_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29N6nrxSGsEPIiJ6vy_ZiO-4&rid=2efe6ab0-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yINLSG4UbKMGxZxPQBEUpqbqUd95bTSEBwmXOMB8XK7TBQztbPKSnJkAMXGzH6fOVQ**&muid=q0eq652EFHBi
+    - generic [ref=e210]:
+      - img "Build PlayWright tests with AI" [ref=e212] [cursor=pointer]
+      - iframe [ref=e215]:
+        - generic [ref=f14e7] [cursor=pointer]:
+          - link [ref=f14e8]:
+            - /url: https://clck.mgid.com/ghits/24638725/i/58092113/0/pp/1/11?h=3KBWguEnyuuwuoT0JmwVAbqkp-LdLvynTG0hPmdDIvOzebTYoG5OpZq7Z9MJIZ3C_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29PAxb1KA3gDqB3R2Q_sf7Z2&rid=2f48d6a7-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yDotcHMnYqNGVwm8XjpUrIS0S7QsOb4TyE5H_wq1CwLYP8cer2qrO3rzqUty25mCpQ**&muid=q0eq652EFHBi
+          - generic [ref=f14e9]:
+            - link [ref=f14e11]:
+              - /url: https://clck.mgid.com/ghits/24638725/i/58092113/0/pp/1/11?h=3KBWguEnyuuwuoT0JmwVAbqkp-LdLvynTG0hPmdDIvOzebTYoG5OpZq7Z9MJIZ3C_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29PAxb1KA3gDqB3R2Q_sf7Z2&rid=2f48d6a7-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yDotcHMnYqNGVwm8XjpUrIS0S7QsOb4TyE5H_wq1CwLYP8cer2qrO3rzqUty25mCpQ**&muid=q0eq652EFHBi
+            - generic [ref=f14e14]:
+              - 'link "Pon un rollo bajo el inodoro por la noche: el resultado impacta" [ref=f14e16]':
+                - /url: https://clck.mgid.com/ghits/24638725/i/58092113/0/pp/1/11?h=3KBWguEnyuuwuoT0JmwVAbqkp-LdLvynTG0hPmdDIvOzebTYoG5OpZq7Z9MJIZ3C_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29PAxb1KA3gDqB3R2Q_sf7Z2&rid=2f48d6a7-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yDotcHMnYqNGVwm8XjpUrIS0S7QsOb4TyE5H_wq1CwLYP8cer2qrO3rzqUty25mCpQ**&muid=q0eq652EFHBi
+              - link "Colgazeta" [ref=f14e18]:
+                - /url: https://clck.mgid.com/ghits/24638725/i/58092113/0/pp/1/11?h=3KBWguEnyuuwuoT0JmwVAbqkp-LdLvynTG0hPmdDIvOzebTYoG5OpZq7Z9MJIZ3C_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29PAxb1KA3gDqB3R2Q_sf7Z2&rid=2f48d6a7-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yDotcHMnYqNGVwm8XjpUrIS0S7QsOb4TyE5H_wq1CwLYP8cer2qrO3rzqUty25mCpQ**&muid=q0eq652EFHBi
+              - link [ref=f14e19]:
+                - /url: https://clck.mgid.com/ghits/24638725/i/58092113/0/pp/1/11?h=3KBWguEnyuuwuoT0JmwVAbqkp-LdLvynTG0hPmdDIvOzebTYoG5OpZq7Z9MJIZ3C_qOgWuq_urKxttuTyolO5_JanqQ6kDhQJTFqV81V29PAxb1KA3gDqB3R2Q_sf7Z2&rid=2f48d6a7-f1bb-11f0-87d1-c4cbe1e3eca4&ts=demoqa.com&tt=Referral&att=4&abd=1&iv=17&ct=1&gdprApplies=0&st=-300&mp4=1&h2=vCKBlcAu2eg6Xt4OzWv9yDotcHMnYqNGVwm8XjpUrIS0S7QsOb4TyE5H_wq1CwLYP8cer2qrO3rzqUty25mCpQ**&muid=q0eq652EFHBi
+                - img [ref=f14e20]
+      - iframe [ref=e218]:
+        - generic [ref=f17e2]:
+          - insertion [ref=f17e3]:
+            - iframe [ref=f17e6]:
+              - generic [ref=f21e4] [cursor=pointer]:
+                - img [ref=f21e15]
+                - button [ref=f21e18]
+                - img [ref=f21e23]
+                - generic [ref=f21e28]: • BOOK NOW •
+                - img [ref=f21e33]
+                - generic [ref=f21e41]: RNT 3314
+          - img [ref=f17e7]
+          - img
+  - contentinfo [ref=e219]:
+    - generic [ref=e220]: © 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.
+```
