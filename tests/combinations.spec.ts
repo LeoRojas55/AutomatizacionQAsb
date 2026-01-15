@@ -22,6 +22,10 @@ test.describe('Pruebas Combinatorias y Elementos Dinámicos', () => {
     await form.removeAds();
     await form.selectHobby('Sports');
     await form.selectHobby('Reading');
+    const isSportsChecked = await page.locator('#hobbies-checkbox-1').isChecked();
+    const isReadingChecked = await page.locator('#hobbies-checkbox-2').isChecked();
+    expect(isSportsChecked).toBeTruthy();
+    expect(isReadingChecked).toBeTruthy();  
     await form.selectState(data.state);
     await form.selectCity(data.city);
 
