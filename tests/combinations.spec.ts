@@ -1,4 +1,4 @@
-// tests/combinations.spec.ts
+
 import { expect, test } from '@playwright/test';
 import * as path from 'path';
 import { PracticeFormPage } from '../pages/PracticeFormPage';
@@ -17,7 +17,7 @@ test.describe('Pruebas Combinatorias y Elementos Dinámicos', () => {
     await form.selectGender('Female');
     await form.fillMobile(data.mobile);
     await form.setDateOfBirth(data.dateOfBirth);
-    await page.locator('body').click();
+    await page.locator('body').click(); // Cierra DatePicker
     await form.addSubject(data.subject);
     await form.removeAds();
     await form.selectHobby('Sports');
@@ -47,30 +47,29 @@ test.describe('Pruebas Combinatorias y Elementos Dinámicos', () => {
     await takeScreenshot(page, 'future_date_success');
   });
 
- test('CP05: Subir imagen + nombre vacío → debe fallar', async ({ page }) => {
-  const form = new PracticeFormPage(page);
-  await form.goto();
-  await form.removeAds();
+  test('CP05: Subir imagen + nombre vacío → debe fallar', async ({ page }) => {
+    const form = new PracticeFormPage(page);
+    await form.goto();
+    await form.removeAds();
 
-  // Dejar First Name vacío
-  await form.fillLastName('Test');
-  await form.fillEmail('test@example.com');
-  await form.selectGender('Male');
-  await form.fillMobile('1234567890');
+    // Dejar First Name vacío
+    await form.fillLastName('Test');
+    await form.fillEmail('test@example.com');
+    await form.selectGender('Male');
+    await form.fillMobile('1234567890');
 
-  const imagePath = path.resolve(process.cwd(), 'test_image.jpg');
-  await form.uploadPicture(imagePath);
+    const imagePath = path.resolve(process.cwd(), 'test_image.jpg');
+    await form.uploadPicture(imagePath);
 
-  await form.submitButton.click();
+    await form.submitButton.click();
 
+    // Scroll al formulario para screenshot
+    await page.locator('#firstName').scrollIntoViewIfNeeded();
 
-  await page.locator('#firstName').scrollIntoViewIfNeeded();
+    // El modal NO debe aparecer
+    const isVisible = await form.isSubmissionModalVisible();
+    expect(isVisible).toBeFalsy();
 
-  // Verificar que el modal NO aparece
-  const isVisible = await form.isSubmissionModalVisible();
-  expect(isVisible).toBeFalsy();
-
-  // Tomar screenshot con el formulario visible
-  await takeScreenshot(page, 'missing_firstname_fail');
-});
+    await takeScreenshot(page, 'missing_firstname_fail');
+  });
 });

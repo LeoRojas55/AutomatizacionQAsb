@@ -3,28 +3,27 @@ import { faker } from '@faker-js/faker';
 import { Page } from '@playwright/test';
 
 /**
- * Toma una captura de pantalla completa de la página actual.
- * @param page - Instancia de la página de Playwright.
- * @param name - Nombre base para el archivo de screenshot.
+ * Toma una captura de pantalla completa del formulario.
  */
-export async function takeScreenshot(page: Page, name: string) {
+export async function takeScreenshot(page: Page, name: string): Promise<void> {
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   const path = `reports/screenshots/${name}_${timestamp}.png`;
+
+  // Asegurar que el formulario esté visible
   await page.locator('#firstName').scrollIntoViewIfNeeded();
+
   await page.screenshot({
     path,
-    fullPage: true // Captura toda la página, no solo el viewport visible
+    fullPage: true
   });
-  
+
   console.log(`📸 Screenshot guardado: ${path}`);
 }
 
 /**
- * Genera datos de prueba realistas usando Faker.
- * @returns Objeto con datos de formulario válidos.
+ * Genera datos de prueba realistas.
  */
 export function generateTestData() {
-  // Generar un número de 10 dígitos que no comience por 0
   const firstDigit = faker.number.int({ min: 1, max: 9 }).toString();
   const remainingDigits = faker.string.numeric({ length: 9, allowLeadingZeros: true });
   const mobile = firstDigit + remainingDigits;
@@ -34,7 +33,7 @@ export function generateTestData() {
     lastName: faker.person.lastName(),
     email: faker.internet.email(),
     mobile,
-    dateOfBirth: '14 Jan 2002', // Fecha fija para consistencia
+    dateOfBirth: '14 Jan 2026',
     subject: 'Computer Science',
     address: faker.location.streetAddress(),
     state: 'NCR',

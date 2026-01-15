@@ -1,4 +1,4 @@
-// pages/PracticeFormPage.ts
+
 import { Locator, Page } from '@playwright/test';
 
 export class PracticeFormPage {
@@ -99,17 +99,15 @@ export class PracticeFormPage {
   }
 
   async selectHobby(hobby: 'Sports' | 'Reading' | 'Music') {
-  const locator = 
-    hobby === 'Sports' ? this.hobbySports :
-    hobby === 'Reading' ? this.hobbyReading :
-    this.hobbyMusic;
-
-  // Forzar scroll y espera
-  await locator.scrollIntoViewIfNeeded();
-  await locator.waitFor({ state: 'visible', timeout: 5000 });
-
-  await locator.click({ force: true, timeout: 10000 });
-}
+    let locator;
+    switch (hobby) {
+      case 'Sports': locator = this.hobbySports; break;
+      case 'Reading': locator = this.hobbyReading; break;
+      case 'Music': locator = this.hobbyMusic; break;
+    }
+    await locator.scrollIntoViewIfNeeded();
+    await locator.click({ force: true });
+  }
 
   async uploadPicture(filePath: string) {
     await this.pictureUpload.setInputFiles(filePath);
@@ -148,7 +146,7 @@ export class PracticeFormPage {
    */
   async isSubmissionModalVisible(): Promise<boolean> {
     try {
-
+      await this.submissionModal.waitFor({ state: 'visible', timeout: 3000 });
       return true;
     } catch {
       return false;

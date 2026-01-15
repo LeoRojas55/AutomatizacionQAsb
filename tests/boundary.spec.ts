@@ -1,4 +1,4 @@
-// tests/boundary.spec.ts
+
 import { expect, test } from '@playwright/test';
 import { PracticeFormPage } from '../pages/PracticeFormPage';
 import { takeScreenshot } from '../utils/helpers';
@@ -19,7 +19,7 @@ test.describe('Pruebas de Valores Límite - Mobile', () => {
 
     // El modal NO debe aparecer
     const isVisible = await form.isSubmissionModalVisible();
-
+    expect(isVisible).toBeFalsy();
     await takeScreenshot(page, 'mobile_9_digits_fail');
   });
 
