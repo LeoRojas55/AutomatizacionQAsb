@@ -6,7 +6,7 @@ export default defineConfig({
   timeout: 30000,
   reporter: [['html', { outputFolder: 'reports/html' }], ['list']],
   use: {
-    headless: true,
+    headless: false,
     viewport: { width: 1280, height: 720 },
     screenshot: 'on',
     video: 'on',
